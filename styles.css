@@ -1,4 +1,7 @@
 button{
+    -webkit-tap-highlight-color: transparent; /*removes blue flash */
+    outline: none;                             /* removes focus outline */
+    -webkit-animation: none;         /*  removes default mobile styling */
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -25,6 +28,8 @@ button{
     transform-origin: top center;
 }
 #display{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     width:100%;
     padding:20px;
     font-size:2rem;
