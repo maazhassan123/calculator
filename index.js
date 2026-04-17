@@ -6,7 +6,7 @@
  function appendToDisplay(input){
            display.value=display.value+input;
  }
-
+ 
  function clearDisplay(){
 
     display.value="";
@@ -16,13 +16,21 @@
     
  }
  function calculate(){
-    try{
-
-    
-    display.value=eval(display.value)
-    }
-    catch(error){
-        display.value="Error";
+     try {
+        let expression = display.value.replaceAll('^', '**'); // ✅ convert ^ to **
+        display.value = eval(expression);
+    } catch (error) {
+        display.value = "Error";
     }
 
  }
+ function squareRoot() {
+    try {
+        if (display.value === "") 
+            {return;}
+        display.value = Math.sqrt(eval(display.value));
+    } 
+    catch (error) {
+        display.value = "Error";
+    }
+}
