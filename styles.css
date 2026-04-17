@@ -1,7 +1,14 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 button{
     -webkit-tap-highlight-color: transparent; /*removes blue flash */
     outline: none;                             /* removes focus outline */
-    -webkit-animation: none;         /*  removes default mobile styling */
+     touch-action: manipulation; /*  this is the key fix for mobile tap delay & highlight */
+    -webkit-appearance: none;     /*  removes default mobile styling */
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -32,6 +39,7 @@ button{
     outline: none;
     width:100%;
     padding:20px;
+    margin-top: 10px;
     font-size:2rem;
     color:white;
     text-align:left;
@@ -39,6 +47,7 @@ button{
     background-color: hsl(0, 0%, 20%);
 }
 body{
+    
     margin:0;
     display:flex;
     justify-content:center;
@@ -47,7 +56,7 @@ body{
     box-sizing:border-box;
     background-color: hsl(20, 10%, 55%);
     color: white;
-   font-size:3rem;
+   font-size:2rem;
    font-weight:bold;
    cursor:pointer;
 }
