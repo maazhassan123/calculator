@@ -29,8 +29,22 @@
         if (display.value === "") 
             {return;}
         display.value = Math.sqrt(eval(display.value));
+        
     } 
     catch (error) {
         display.value = "Error";
+    }
+}
+function log(){
+    try{
+        if(display.value===""){
+            return;
+        }
+        display.value=Math.log(eval(display.value));
+
+    }
+    catch(error){
+        display.value="Error";
+        
     }
 }
